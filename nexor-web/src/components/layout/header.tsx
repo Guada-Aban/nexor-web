@@ -5,11 +5,11 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const NAV_ITEMS = [
+  { label: 'Inicio', href: '/' },
   { label: 'Quiénes Somos', href: '/quienes-somos' },
   { label: 'Obras e Infraestructura', href: '/obras-e-infraestructura', color: 'hover:text-naranja', indicator: 'bg-naranja' },
   { label: 'Servicios Industriales', href: '/servicios-industriales', color: 'hover:text-green-400', indicator: 'bg-green-500', proximamente: true },
   { label: 'Consultoría Empresarial', href: '/consultoria-empresarial', color: 'hover:text-azul', indicator: 'bg-azul' },
-  { label: 'Clientes y Antecedentes', href: '/clientes-y-antecedentes' },
 ]
 
 export default function Header() {

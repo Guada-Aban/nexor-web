@@ -24,7 +24,6 @@ export default function Footer() {
             { label: 'Obras e Infraestructura', href: '/obras-e-infraestructura' },
             { label: 'Servicios Industriales', href: '/servicios-industriales' },
             { label: 'Consultoría Empresarial', href: '/consultoria-empresarial' },
-            { label: 'Clientes y Antecedentes', href: '/clientes-y-antecedentes' },
             { label: 'Contacto', href: '/contacto' },
           ].map((link) => (
             <Link
@@ -53,9 +52,9 @@ export default function Footer() {
 
       <div className="border-t border-white/10 px-6 py-4 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
         <p className="text-xs text-white/30">
-          © {new Date().getFullYear()} Nexor Group · ALIAN S.A.S. · CUIT 30-71890248-3
+          © {new Date().getFullYear()} Nexor Group · ALIAN S.A.S. 
         </p>
-        <p className="text-xs text-white/30">Malargüe · Mendoza · Argentina</p>
+        <p className="text-xs text-white/30">Mendoza · Argentina</p>
       </div>
     </footer>
   )
