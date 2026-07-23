@@ -62,7 +62,7 @@ export default function FormContacto() {
                     Malargüe · Mendoza · Argentina
                   </p>
                   <p className="text-nexor-dark/40 text-xs mt-1">
-                    ALIAN S.A.S. · CUIT 30-71890248-3
+                    ALIAN S.A.S. 
                   </p>
                 </div>
               </div>
