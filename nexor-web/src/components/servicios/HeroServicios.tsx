@@ -8,14 +8,19 @@ export default function HeroServicios() {
     <section className="relative min-h-screen flex items-end overflow-hidden bg-black">
 
       <div className="absolute inset-0">
-  <img
-    src="/images/servicios-industriales.png"
-    alt="Servicios Industriales"
-    className="w-full h-full object-cover object-center"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
-</div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-green-950/20 to-slate-950" />
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg, transparent, transparent 40px,
+              rgba(74,124,89,0.05) 40px, rgba(74,124,89,0.05) 41px
+            )`
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
+      </div>
 
       {/* Línea verde lateral */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-700 z-10" />

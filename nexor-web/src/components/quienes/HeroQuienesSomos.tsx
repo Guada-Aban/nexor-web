@@ -5,15 +5,11 @@ import { motion } from 'framer-motion'
 export default function HeroQuienesSomos() {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden bg-black">
-     <div className="absolute inset-0">
-  <img
-    src="/images/quienes-somos.png"
-    alt="Quienes Somos"
-    className="w-full h-full object-cover object-center"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
-</div>
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
+      </div>
 
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-naranja via-azul to-green-700 z-10" />
 
