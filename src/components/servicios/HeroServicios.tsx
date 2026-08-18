@@ -9,7 +9,7 @@ export default function HeroServicios() {
 
       <div className="absolute inset-0">
   <img
-    src="/images/servicios-industriales.jpg"
+    src="/api/images/servicios-industriales.jpg"
     alt="Servicios Industriales"
     className="w-full h-full object-cover object-center"
   />

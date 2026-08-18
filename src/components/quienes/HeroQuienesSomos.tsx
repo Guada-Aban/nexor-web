@@ -7,7 +7,7 @@ export default function HeroQuienesSomos() {
     <section className="relative min-h-screen flex items-end overflow-hidden bg-black">
      <div className="absolute inset-0">
   <img
-    src="/images/quienes-somos.jpg"
+    src='/api/images/quienes-somos.jpg'
     alt="Quienes Somos"
     className="w-full h-full object-cover object-center"
   />

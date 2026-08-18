@@ -10,7 +10,7 @@ export default function HeroConsultoria() {
 
       <div className="absolute inset-0">
   <img
-    src="/images/consultoria-empresarial.jpg"
+    src='/api/images/consultoria-empresarial.jpg'
     alt="Consultoría Empresarial"
     className="w-full h-full object-cover object-center"
   />

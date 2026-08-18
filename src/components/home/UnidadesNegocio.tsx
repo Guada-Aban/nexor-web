@@ -16,7 +16,7 @@ const UNIDADES = [
     text: 'text-naranja',
     href: '/obras-e-infraestructura',
     numero: '01',
-    imagen: '/images/obras-e-infra.jpg',
+    imagen: '/api/images/obras-e-infra.jpg',
   },
   {
     id: 'azul',
@@ -28,7 +28,7 @@ const UNIDADES = [
     text: 'text-azul',
     href: '/consultoria-empresarial',
     numero: '02',
-    imagen: '/images/consultoria-empresarial.png',
+    imagen: '/api/images/consultoria-empresarial.jpg',
   },
   {
     id: 'verde',
@@ -40,7 +40,7 @@ const UNIDADES = [
     text: 'text-green-700',
     href: '/servicios-industriales',
     numero: '03',
-    imagen: '/images/servicios-industriales.png',
+    imagen: '/api/images/servicios-industriales.jpg',
     proximamente: true,
   },
 ]

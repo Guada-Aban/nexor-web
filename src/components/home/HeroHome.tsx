@@ -10,7 +10,7 @@ export default function HeroHome() {
 
       <div className="absolute inset-0">
   <img
-    src="/images/inicio-web.jpg"
+    src="/api/images/inicio-web.jpg"
     alt="Inicio Nexor Group"
     className="w-full h-full object-cover object-center"
   />
