@@ -3,14 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
-  },
-  async rewrites() {
-    return [
+    remotePatterns: [
       {
-        source: '/images/:path*',
-        destination: '/public/images/:path*',
+        protocol: 'https',
+        hostname: 'blanchedalmond-lark-179970.hostingersite.com',
       },
-    ]
+    ],
   },
 };
 
