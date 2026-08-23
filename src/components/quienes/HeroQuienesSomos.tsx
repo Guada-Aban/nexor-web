@@ -5,15 +5,15 @@ import { motion } from 'framer-motion'
 export default function HeroQuienesSomos() {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden bg-black">
-     <div className="absolute inset-0">
-  <img
-    src='/api/images/quienes-somos.jpg'
-    alt="Quienes Somos"
-    className="w-full h-full object-cover object-center"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
-</div>
+      <div className="absolute inset-0">
+        <img
+          src="https://blanchedalmond-lark-179970.hostingersite.com/wp-content/uploads/2026/08/quienes-somos.jpg"
+          alt="Quienes Somos"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
+      </div>
 
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-naranja via-azul to-green-700 z-10" />
 
