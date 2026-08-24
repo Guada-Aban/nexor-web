@@ -2,22 +2,20 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
 
 const UNIDADES = [
-  { nombre: 'Nexor Obras', sub: 'Obras e Infraestructura', color: '#F57828', href: '/obras-e-infraestructura' },
-  { nombre: 'Nexor Consultoría', sub: 'Ingeniería y Consultoría', color: '#2D73B5', href: '/consultoria-empresarial' },
-  { nombre: 'Nexor Servicios', sub: 'Servicios Industriales', color: '#4A7C59', href: '/servicios-industriales' },
+  { nombre: 'Nexor Obras', sub: 'Obras e Infraestructura', color: '#F57828' },
+  { nombre: 'Nexor Consultoría', sub: 'Ingeniería y Consultoría', color: '#2D73B5' },
+  { nombre: 'Nexor Servicios', sub: 'Servicios Industriales', color: '#4A7C59' },
 ]
 
 export default function SplashScreen({ onComplete }: { onComplete: () => void }) {
   const [phase, setPhase] = useState<'logo' | 'units' | 'exit'>('logo')
-  const [hovered, setHovered] = useState<string | null>(null)
 
   useEffect(() => {
     const t1 = setTimeout(() => setPhase('units'), 1800)
-    const t2 = setTimeout(() => setPhase('exit'), 30000)
-    const t3 = setTimeout(() => onComplete(), 30000)
+    const t2 = setTimeout(() => setPhase('exit'), 5200)
+    const t3 = setTimeout(() => onComplete(), 6000)
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
   }, [onComplete])
 
@@ -89,17 +87,7 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
             className="w-px h-10 bg-gradient-to-b from-transparent via-white/30 to-transparent relative z-10"
           />
 
-          {/* Instrucción */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={phase === 'units' ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-white/30 text-[10px] tracking-[0.5em] uppercase relative z-10 -mb-6"
-          >
-            Seleccioná tu unidad
-          </motion.p>
-
-          {/* Tres unidades clickeables */}
+          {/* Tres unidades — solo visuales, sin links */}
           <div className="flex flex-row items-start justify-center gap-10 md:gap-20 relative z-10">
             {UNIDADES.map((u, i) => (
               <motion.div
@@ -109,30 +97,25 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
                 transition={{ duration: 0.7, delay: i * 0.18, ease: [0.22, 1, 0.36, 1] }}
                 className="flex flex-col items-center gap-3 w-28"
               >
-                <Link
-                  href={u.href}
-                  onMouseEnter={() => setHovered(u.nombre)}
-                  onMouseLeave={() => setHovered(null)}
-                  onClick={() => onComplete()}
+                <motion.div
+                  animate={phase === 'units' ? {
+                    boxShadow: [
+                      `0 0 0px ${u.color}00`,
+                      `0 0 20px ${u.color}60`,
+                      `0 0 0px ${u.color}00`,
+                    ]
+                  } : {}}
+                  transition={{ duration: 2, delay: 0.8 + i * 0.2, repeat: Infinity, ease: 'easeInOut' }}
+                  className="w-14 h-14 flex items-center justify-center font-black text-xl text-white"
+                  style={{ backgroundColor: u.color }}
                 >
-                  <motion.div
-                    animate={{
-                      boxShadow: hovered === u.nombre
-                        ? `0 0 35px ${u.color}99`
-                        : [`0 0 0px ${u.color}00`, `0 0 20px ${u.color}60`, `0 0 0px ${u.color}00`],
-                      scale: hovered === u.nombre ? 1.15 : 1,
-                    }}
-                    transition={
-                      hovered === u.nombre
-                        ? { duration: 0.2 }
-                        : { duration: 2, delay: 0.8 + i * 0.2, repeat: Infinity, ease: 'easeInOut' }
-                    }
-                    className="w-14 h-14 flex items-center justify-center font-black text-xl text-white cursor-pointer"
-                    style={{ backgroundColor: u.color }}
+                  <motion.span
+                    animate={phase === 'units' ? { scale: [1, 1.08, 1] } : {}}
+                    transition={{ duration: 2, delay: 0.8 + i * 0.2, repeat: Infinity, ease: 'easeInOut' }}
                   >
                     N
-                  </motion.div>
-                </Link>
+                  </motion.span>
+                </motion.div>
                 <div className="text-center">
                   <p className="text-white text-[11px] font-bold tracking-widest uppercase leading-tight">
                     {u.nombre}
@@ -155,33 +138,11 @@ export default function SplashScreen({ onComplete }: { onComplete: () => void })
             Construimos · Operamos · Gestionamos
           </motion.p>
 
-
-          {/* Botón ver sitio */}
-<motion.div
-  initial={{ opacity: 0, y: 10 }}
-  animate={phase === 'units' ? { opacity: 1, y: 0 } : {}}
-  transition={{ duration: 0.6, delay: 0.8 }}
-  className="relative z-10"
->
-  <Link
-    href="/"
-    onClick={() => onComplete()}
-    className="group inline-flex items-center gap-3 border border-white/20 hover:border-white/60 bg-white/5 hover:bg-white/10 text-white/50 hover:text-white px-8 py-3 transition-all duration-300"
-  >
-    <span className="text-[11px] tracking-[0.3em] uppercase font-semibold">
-      Ver sitio completo
-    </span>
-    <span className="text-white/30 group-hover:text-white group-hover:translate-x-1 transition-all duration-300">
-      →
-    </span>
-  </Link>
-</motion.div>
-
           {/* Barra de progreso */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 38, ease: 'linear' }}
+            transition={{ duration: 5, ease: 'linear' }}
             style={{ transformOrigin: 'left' }}
             className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-naranja via-azul to-green-600 opacity-40"
           />

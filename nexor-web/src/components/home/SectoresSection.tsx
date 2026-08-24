@@ -58,22 +58,14 @@ export default function SectoresSection() {
             {/* Imagen grande */}
             <div className="col-span-2 aspect-[16/7] bg-stone-700 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-stone-600 to-stone-800 flex items-center justify-center">
-                <img
-                src="api\images\yacimiento.png"
-                alt="Yacimiento"
-                className="w-full h-full object-cover"
-                />
+                <span className="text-stone-500 text-xs tracking-widest uppercase">Foto yacimiento</span>
               </div>
             </div>
 
             {/* Dos imágenes chicas */}
             <div className="aspect-square bg-stone-800 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-stone-700 to-stone-900 flex items-center justify-center">
-                <img
-                src="api\images\oil-gas.png"
-                alt="Oil & Gas"
-                className="w-full h-full object-cover"
-                />
+                <span className="text-stone-600 text-xs tracking-widest uppercase">Oil & Gas</span>
               </div>
             </div>
             <div className="aspect-square bg-naranja/20 relative overflow-hidden flex items-center justify-center">

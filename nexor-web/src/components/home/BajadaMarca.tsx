@@ -58,13 +58,14 @@ export default function BajadaMarca() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative w-full aspect-[4/3] overflow-hidden">
-  <img
-    src="api\images\integridad-industrial.png"
-    alt="Integridad industrial"
-    className="w-full h-full object-cover"
-  />
-</div>
+            {/* Placeholder imagen industrial */}
+            <div className="relative w-full aspect-[4/3] bg-stone-200 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-stone-300 to-stone-400 flex items-center justify-center">
+                <span className="text-stone-500 text-sm tracking-widest uppercase">
+                  Foto industrial
+                </span>
+              </div>
+            </div>
 
             {/* Badge flotante */}
             <div className="absolute -bottom-4 -left-4 bg-naranja text-white px-6 py-4">

@@ -54,13 +54,13 @@ export default function LaEmpresa() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative w-full aspect-[4/3] overflow-hidden">
-  <img
-    src="api\images\trayectoria-origen.png"
-    alt="Trayectoria y Origen"
-    className="w-full h-full object-cover"
-  />
-</div>s
+            <div className="w-full aspect-[3/4] bg-stone-200 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-stone-300 to-stone-500 flex items-center justify-center">
+                <span className="text-stone-500 text-sm tracking-widest uppercase">
+                  Foto profesional en campo
+                </span>
+              </div>
+            </div>
 
             <div className="absolute -bottom-4 -right-4 bg-naranja text-white px-6 py-4">
               <p className="text-3xl font-bold">+10</p>

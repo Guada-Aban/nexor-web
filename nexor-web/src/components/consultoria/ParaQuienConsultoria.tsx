@@ -71,13 +71,11 @@ export default function ParaQuienConsultoria() {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="relative w-full aspect-[4/3] overflow-hidden">
-  <img
-    src="api\images\para-quien.png"
-    alt="Para quién es esta unidad"
-    className="w-full h-full object-cover"
-  />
-</div>
+            <div className="w-full aspect-[4/3] bg-slate-200 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center">
+                <span className="text-slate-500 text-sm tracking-widest uppercase">Foto consultoría</span>
+              </div>
+            </div>
             <div className="absolute -bottom-4 -right-4 bg-azul text-white px-6 py-4">
               <p className="text-2xl font-bold">+10</p>
               <p className="text-white/80 text-xs uppercase tracking-wider">Años de experiencia sectorial</p>
