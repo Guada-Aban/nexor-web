@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  generateBuildId: async () => {
+    return Date.now().toString()
+  },
 };
 
 export default nextConfig;
