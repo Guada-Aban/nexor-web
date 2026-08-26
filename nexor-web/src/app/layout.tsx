@@ -3,7 +3,6 @@ import { Space_Grotesk, Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
-import PageLoader from '@/components/layout/PageLoader'
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-heading',
@@ -25,19 +24,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es">
       <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}>
-        <div
-          id="page-loader"
-          style={{
-            position: 'fixed',
-            inset: 0,
-            background: 'black',
-            zIndex: 200,
-            transition: 'opacity 0.3s',
-          }}
-        />
-        <PageLoader />
         <Header />
         <main className="flex-1 pt-16">
           {children}
