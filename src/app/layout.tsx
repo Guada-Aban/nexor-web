@@ -25,7 +25,21 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
+      <head>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.addEventListener('load', function() {
+              var loader = document.getElementById('page-loader');
+              if (loader) {
+                loader.style.opacity = '0';
+                setTimeout(function() { loader.style.display = 'none'; }, 300);
+              }
+            });
+          `
+        }} />
+      </head>
       <body className={`${spaceGrotesk.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}>
+        <div id="page-loader" className="fixed inset-0 bg-black z-[200] transition-opacity duration-300" />
         <Header />
         <main className="flex-1 pt-16">
           {children}
