@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import SplashScreen from '@/components/layout/SplashScreen'
 import HeroHome from '@/components/home/HeroHome'
 import UnidadesNegocio from '@/components/home/UnidadesNegocio'
@@ -12,15 +12,6 @@ import CTASection from '@/components/home/CTASection'
 
 export default function Home() {
   const [splashDone, setSplashDone] = useState(false)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return (
-    <div className="fixed inset-0 bg-black z-[100]" />
-  )
 
   return (
     <>
