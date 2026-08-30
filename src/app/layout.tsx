@@ -25,17 +25,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <head>
-        <style>{`
-          body { visibility: hidden; }
-          body.ready { visibility: visible; }
-        `}</style>
-        <script dangerouslySetInnerHTML={{__html: `
-          document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('ready');
-          });
-        `}} />
-      </head>
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased min-h-screen flex flex-col`}
         suppressHydrationWarning
