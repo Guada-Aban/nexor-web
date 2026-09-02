@@ -19,7 +19,7 @@ const UNIDADES = [
     color: '#2D73B5',
     href: '/consultoria-empresarial',
     logo: null,
-    logoGrande: null,
+    logoGrande: '/images/n-azul.png',
   },
   {
     nombre: 'Nexor Servicios',
