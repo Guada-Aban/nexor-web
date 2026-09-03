@@ -18,7 +18,7 @@ const UNIDADES = [
     sub: 'Ingeniería y Consultoría',
     color: '#2D73B5',
     href: '/consultoria-empresarial',
-    logo: null,
+    logo: '/images/n-azul-logo.png',
     logoGrande: '/images/n-azul.png',
   },
   {
