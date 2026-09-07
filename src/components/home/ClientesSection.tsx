@@ -2,11 +2,11 @@
 
 export default function ClientesSection() {
   const clientes = [
-    'Nabors International Argentina',
-    'San Antonio Internacional',
-    'Premix S.A.',
-    'Transportes Andreu',
-    'Transportes Tahan',
+    'Phoenix global resources',
+    'San Antonio',
+    'MVG servicios SA',
+    'BILOVA SAS',
+     'Grupo HYDE Development',
   ]
 
   // Duplicamos el array para que el marquee sea infinito sin saltos
